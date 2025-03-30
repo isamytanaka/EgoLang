@@ -1,0 +1,15 @@
+/*
+
+TESTE
+
+*/
+
+// teste
+
+public mutable int x = 10;
+public immutable string name = "Ego";
+if (x > 5) {
+    print(name);
+} else {
+    print(x);
+}
