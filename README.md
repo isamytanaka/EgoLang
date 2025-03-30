@@ -1,5 +1,6 @@
 ## EgoLang - 
-> **Version: 1.9 (Update, March, 23th, 2025)**
+>  **Version: 2.7.9 (Update, March, 29th, 2025)**
+
 ![Logoprimary](https://egolang.neocities.org/1743296644840.png)
 
 
