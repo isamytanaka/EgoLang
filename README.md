@@ -1,5 +1,4 @@
-## EgoLang - 
->  **Version: 2.7.9 (Update, March, 29th, 2025)**
+>  Version: 2.7.9 **(Update, March, 29th, 2025)**
 
 ![Logoprimary](https://egolang.neocities.org/1743296644840.png)
 
@@ -7,77 +6,7 @@
 # Ego Language Documentation
 
 ## Overview
-
-> Ego is a strongly-typed programming language with explicit visibility and mutability controls. It compiles to Python bytecode and provides a structured approach to programming with clear rules about variable access and modification.
-
-##
-
-
-> Ego includes a small set of standard packages, most of which were created to fix language errors, adjust logic, and more.
-
-All packages are compiled and located in the directory:
-
-``/std_packpages``
-
-The available packages are:
-
-**pkg_dataconfig.ego**  
-A simple package for handling syntax and data (private, public, etc.).
-
-**How to import it?**
-
-1. Place the file in the same directory as the compiler.
-2. Import the package using the following command:
-
-```python
-from pkg_dataconfig import *
-```
-
-3. Call the function:
-
-```python
-pkg_dataconfig();
-```
-
-That's it! This package handles some errors in the compiler, mainly when translating explicit data and other details.
-
-**Source code available in:**  
-pkg_dataconfig_nocompiled.ego
-
----
-
-**Sizeof_pkg**  
-A package designed for string configuration and memory storage limitation. Place it in your compiler environment. The library file name is:
-
-**sizeof_pkg.ego**
-
-**How to import it?**
-
-1. Import the package with the following command:
-
-```python
-from sizeof_pkg import *
-```
-
-2. Create the `pkg` object:
-
-```python
-pkg = variable_name;
-```
-
-3. Then, pass the variable as a default parameter in the language:
-
-```python
-public mutable str variable_name = "MY_TEXT";
-```
-
-If your variable exceeds 100 memory values, it will be reformatted to hold only the first 10 characters.
-
-**Source code available in:**  
-pkg_sizeof_str.EgoJIT
-
-
-
+**EgoLang** is a **strongly typed** programming language designed to give developers better control over variable visibility and mutability. It focuses on clear structure and safe access to data, making code more reliable and predictable.
 
 ## Basic Syntax
 
