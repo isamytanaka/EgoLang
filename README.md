@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![EgoLang Logo](https://egolang.neocities.org/imagem_convertida.png)
+![EgoLang Logo](logo.png)
 
 A strongly-typed programming language with explicit control over visibility and mutability
 
