@@ -303,10 +303,6 @@ EgoLang was initially launched with version 2.7.9 in March 2025. The source code
 | **2.7.9** | March 2025 | • Initial public release<br>• Basic language features (variables, functions, conditionals, loops)<br>• Strong typing system with visibility and mutability control<br>• JIT compilation to Python bytecode |
 | **Earlier versions** | Pre-March 2025 | *Source code not publicly available* |
 
-<div align="center">
-  <img src="https://cdn.discordapp.com/attachments/830953538114568223/941792141132906536/version_timeline.png" alt="Version Timeline" width="70%"/>
-</div>
-
 ## 👥 Contributing
 
 Contributions to EgoLang are welcome! Here's how you can contribute:
