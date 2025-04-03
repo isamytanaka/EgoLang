@@ -11,7 +11,7 @@ A strongly-typed programming language with explicit control over visibility and 
 [![License](https://img.shields.io/badge/License-MIT-9370DB?style=flat&logo=license&logoColor=white&labelColor=8A2BE2&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka/EgoLang/blob/main/LICENSE)
 [![Python](https://img.shields.io/badge/Built_With-Python-4B8BBE?style=flat&logo=python&logoColor=white&labelColor=306998&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://www.python.org/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat&logo=github&logoColor=white&labelColor=3CB371&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka/EgoLang/pulls)
-[![Documentation](https://img.shields.io/badge/Docs-Latest-FF8C00?style=flat&logo=read-the-docs&logoColor=white&labelColor=FF4500&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka/EgoLang/wiki)
+[![Documentation](https://img.shields.io/badge/Docs-Latest-FF8C00?style=flat&logo=read-the-docs&logoColor=white&labelColor=FF4500&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka/EgoLang/README.md)
 
 <br>
 
