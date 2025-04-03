@@ -10,3 +10,6 @@ public immutable function for_limit_sizeof_str() {
         private mutable sizeof=50;
         }
 }
+
+/ ESTA LIB/CÓDIGO NÃO FUNCIONA EM EGO 2.8!!! */
+
