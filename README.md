@@ -6,6 +6,7 @@
 
 A strongly-typed programming language with explicit control over visibility and mutability
 
+[![EgoLang](https://img.shields.io/badge/EgoLang-%E2%9A%96%20Powered-FFD700?style=flat&logo=expensify&logoColor=00274D&labelColor=0057B7&color=00A4E0&borderRadius=50)](https://github.com/isamytanaka/EgoLang)
 [![Version](https://img.shields.io/badge/Version-2.8.0-FF4500?style=flat&logo=v&logoColor=white&labelColor=FF7F50&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka/EgoLang)
 [![License](https://img.shields.io/badge/License-MIT-9370DB?style=flat&logo=license&logoColor=white&labelColor=8A2BE2&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka/EgoLang/blob/main/LICENSE)
 [![Python](https://img.shields.io/badge/Built_With-Python-4B8BBE?style=flat&logo=python&logoColor=white&labelColor=306998&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://www.python.org/)
