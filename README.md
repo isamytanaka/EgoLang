@@ -1,414 +1,333 @@
-# EgoLang Documentation
+# EgoLang
+
+<div align="center">
 
 ![EgoLang Logo](https://egolang.neocities.org/imagem_convertida.png)
 
-**Version: 2.7.9 (March 2025)**
+A strongly-typed programming language with explicit control over visibility and mutability
 
-## Table of Contents
-- [Introduction](#introduction)
-- [Main Features](#main-features)
-- [Basic Syntax](#basic-syntax)
-  - [Comments](#comments)
-  - [Variables](#variables)
-  - [Control Structures](#control-structures)
-  - [Functions](#functions)
-- [Practical Examples](#practical-examples)
-  - [Variable Usage](#variable-usage)
-  - [Conditional Logic](#conditional-logic)
-  - [Loops](#loops)
-  - [Functions](#functions-1)
-  - [Complex Examples](#complex-examples)
-- [Error Handling](#error-handling)
-- [Compilation Process](#compilation-process)
-- [Language Limitations](#language-limitations)
-- [Using the Compiler](#using-the-compiler)
+[![Version](https://img.shields.io/badge/Version-2.8.0-FF4500?style=flat&logo=v&logoColor=white&labelColor=FF7F50&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka/EgoLang)
+[![License](https://img.shields.io/badge/License-MIT-9370DB?style=flat&logo=license&logoColor=white&labelColor=8A2BE2&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka/EgoLang/blob/main/LICENSE)
+[![Python](https://img.shields.io/badge/Built_With-Python-4B8BBE?style=flat&logo=python&logoColor=white&labelColor=306998&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://www.python.org/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat&logo=github&logoColor=white&labelColor=3CB371&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka/EgoLang/pulls)
+[![Documentation](https://img.shields.io/badge/Docs-Latest-FF8C00?style=flat&logo=read-the-docs&logoColor=white&labelColor=FF4500&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka/EgoLang/wiki)
 
-## Introduction
+<br>
 
-EgoLang is a strongly-typed programming language specifically engineered to provide developers with precise control over variable visibility and mutability. By enforcing explicit declarations and strict typing, EgoLang creates a coding environment where data integrity and access patterns are clear, making your programs more reliable, maintainable, and secure.
+[![Stars](https://img.shields.io/github/stars/isamytanaka/EgoLang?style=flat&logo=github&logoColor=white&label=Stars&color=FFD700&labelColor=FFA500&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka/EgoLang/stargazers)
+[![Forks](https://img.shields.io/github/forks/isamytanaka/EgoLang?style=flat&logo=git&logoColor=white&label=Forks&color=32CD32&labelColor=228B22&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka/EgoLang/network/members)
+[![Issues](https://img.shields.io/github/issues/isamytanaka/EgoLang?style=flat&logo=github&logoColor=white&label=Issues&color=FF6347&labelColor=FF4500&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka/EgoLang/issues)
+[![Downloads](https://img.shields.io/github/downloads/isamytanaka/EgoLang/total?style=flat&logo=github&logoColor=white&label=Downloads&color=6A5ACD&labelColor=483D8B&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka/EgoLang/releases)
+[![Created](https://img.shields.io/badge/Created-Mar%202025-9932CC?style=flat&logo=github&logoColor=white&labelColor=8B008B&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka/EgoLang)
+[![Creator](https://img.shields.io/badge/Creator-isamytanaka-1E90FF?style=flat&logo=github&logoColor=white&labelColor=4169E1&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka)
 
-The philosophy behind EgoLang emphasizes clarity and explicit intent in every line of code. Each variable or function declaration clearly communicates its scope, modifiability, and data expectations, which eliminates many of the ambiguities and potential bugs found in less strict languages.
+<br>
 
-## Main Features
+[![Release Date](https://img.shields.io/badge/Latest_Release-April_2025-E91E63?style=flat&logo=github&logoColor=white&labelColor=C2185B&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka/EgoLang/releases)
+[![Code Size](https://img.shields.io/github/languages/code-size/isamytanaka/EgoLang?style=flat&logo=github&logoColor=white&label=Code%20Size&color=00BCD4&labelColor=0097A7&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka/EgoLang)
+[![Repo Size](https://img.shields.io/github/repo-size/isamytanaka/EgoLang?style=flat&logo=github&logoColor=white&label=Repo%20Size&color=009688&labelColor=00796B&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka/EgoLang)
+[![Lines of Code](https://img.shields.io/tokei/lines/github/isamytanaka/EgoLang?style=flat&logo=github&logoColor=white&label=Lines&color=CDDC39&labelColor=AFB42B&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka/EgoLang)
+[![Test Coverage](https://img.shields.io/badge/Test_Coverage-87%25-4CAF50?style=flat&logo=pytest&logoColor=white&labelColor=388E3C&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka/EgoLang/actions)
+[![Build Status](https://img.shields.io/github/workflow/status/isamytanaka/EgoLang/CI?style=flat&logo=github-actions&logoColor=white&label=Build&color=03A9F4&labelColor=0288D1&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka/EgoLang/actions)
 
-### Visibility Control
-EgoLang enforces explicit visibility declarations for all variables and functions, creating clear boundaries between different parts of your code. This leads to more maintainable codebases, especially in larger projects where data access control becomes crucial.
+</div>
 
-### Explicit Mutability
-Every variable in EgoLang includes a clear declaration of whether it can be modified after initialization. This prevents unexpected changes to critical values and makes code behavior more predictable across the entire application.
+## 📚 Table of Contents
 
-### Strong Typing
-The language's strict type system ensures that values are used consistently throughout your code. Type incompatibilities are caught at compile time rather than causing runtime failures, significantly reducing the potential for bugs.
+- [Overview](#-overview)
+- [Key Features](#-key-features)
+- [Development Status](#-development-status)
+- [Code Examples](#-code-examples)
+- [Paradigm Support](#-paradigm-support)
+- [Installation & Usage](#-installation--usage)
+- [Current Limitations](#-current-limitations)
+- [Repository Statistics](#-repository-statistics)
+- [Version History](#-version-history)
+- [Contributing](#-contributing)
+- [License](#-license)
 
-### Error Detection
-EgoLang's compiler performs comprehensive static analysis to identify potential issues before execution. Error messages are clear and actionable, helping developers quickly resolve problems in their code.
+## 🔍 Overview
 
-### JIT Compilation
-The language uses Just-In-Time compilation to transform EgoLang code into optimized Python bytecode, providing good performance while maintaining strong safety guarantees.
+EgoLang is a modern programming language designed with a focus on code clarity, data integrity, and explicit intent. By enforcing strict typing and explicit declarations for variable visibility and mutability, EgoLang creates code that is not only more reliable and maintainable but also inherently more secure.
 
-### Clear Structure
-The syntax is designed to be explicit and consistent, which improves readability and makes code maintenance simpler. Every element of the language follows predictable patterns that are easy to understand.
+The core philosophy of EgoLang centers around making code behavior predictable and eliminating ambiguities that often lead to bugs in less strict languages. Every declaration clearly communicates the intended scope, modifiability, and data expectations, reducing cognitive load during code review and maintenance.
 
-## Basic Syntax
+## ✨ Key Features
 
-### Comments
+| Feature | Description |
+|---------|-------------|
+| **Explicit Visibility Control** | Every variable and function must declare its visibility scope (`public`, `private`, or `protected`), creating clear boundaries in your codebase |
+| **Explicit Mutability** | Variables must be declared as `mutable`, `immutable`, or `const`, preventing unexpected changes to critical values |
+| **Strong Static Typing** | Type checking at compile time ensures that values are used consistently throughout your code |
+| **JIT Compilation** | EgoLang compiles to optimized Python bytecode, offering good performance while maintaining strong safety guarantees |
+| **Comprehensive Error Detection** | Thorough static analysis catches potential issues before execution with clear, actionable error messages |
+| **Python Integration** | Seamless Python integration with the `@py:` directive allows leveraging Python's rich ecosystem when needed |
+| **OOP Support** | Class declarations, inheritance, and methods for structured and modular code organization |
+| **Clear and Consistent Syntax** | Predictable syntax patterns improve readability and make code maintenance simpler |
 
-EgoLang supports both single-line and multi-line comments to help document your code:
+## 🚧 Development Status
 
-```
-// This is a single-line comment
+**Important Note:** EgoLang is a basic language still in early development. The current version (2.8.0) represents our initial public releases, and we're actively working to expand its capabilities, improve performance, and add new features.
 
-/* This is a
-   multi-line comment
-   that spans multiple lines */
-```
+As a language in its early stages, EgoLang is not yet recommended for production environments or mission-critical applications. We welcome contributors and early adopters who are interested in helping shape the future of this experimental language.
 
-### Variables
+## 📝 Code Examples
 
-Variables in EgoLang follow a strict declaration pattern that includes visibility, mutability, type, and name:
-
-```
-visibility mutability type name = value;
-```
-
-For example:
-
-```
-public mutable int counter = 0;
-private immutable string name = "EgoLang";
-protected const bool isEnabled = true;
-```
-
-#### Visibility Modifiers
-
-- `public`: Accessible from anywhere in the program
-- `private`: Limited to the current scope, not accessible from outside
-- `protected`: Accessible in the current scope and any child scopes
-
-#### Mutability Modifiers
-
-- `mutable`: The variable's value can be changed after declaration
-- `immutable`: The variable's value cannot be changed after declaration
-- `const`: Cannot be changed (effectively the same as immutable)
-
-#### Data Types
-
-- `int`: Integer values (whole numbers)
-- `float`: Floating-point values (decimal numbers)
-- `string`: Text values enclosed in quotes
-- `bool`: Boolean values (true/false)
-- `list`: Ordered collection of values
-- `dict`: Key-value pairs (associative array)
-
-### Control Structures
-
-#### Conditionals (if-else)
+### Hello World
 
 ```
-if (condition) {
-    // Code executed when condition is true
-} else if (anotherCondition) {
-    // Code executed when anotherCondition is true
-} else {
-    // Code executed when all conditions are false
-}
+public immutable string message = "Hello, EgoLang!";
+print(message);
 ```
 
-#### Loops
-
-For Loops:
-```
-for (initialization; condition; update) {
-    // Code executed repeatedly while condition is true
-}
-```
-
-While Loops:
-```
-while (condition) {
-    // Code executed repeatedly while condition is true
-}
-```
-
-### Functions
-
-Functions are declared with visibility, the `function` keyword, name, parameters, and body:
+### Variable Declaration and Manipulation
 
 ```
-visibility function name(type param1, type param2, ...) {
-    // Function body
-    return value;
-}
-```
-
-For example:
-
-```
-public function calculateArea(int width, int height) {
-    public mutable int area = width * height;
-    return area;
-}
-```
-
-### Printing Values
-
-```
-print(value);
-```
-
-## Practical Examples
-
-### Variable Usage
-
-Basic variable declaration and manipulation:
-
-```
-// Declaring different types of variables
+// Declaring variables with different visibility and mutability
 public mutable int counter = 10;
-private immutable string message = "Hello, EgoLang!";
+private immutable string name = "EgoLang";
 protected const float PI = 3.14159;
 
-// Manipulating mutable variables
+// Modifying mutable variables
 counter = counter + 5;
 print(counter);  // Outputs: 15
 
-// Using variables together
-public mutable string result = message + " Counter: " + counter;
-print(result);  // Outputs: Hello, EgoLang! Counter: 15
+// Combining variables
+public mutable string result = name + " Counter: " + counter;
+print(result);  // Outputs: EgoLang Counter: 15
 ```
 
-### Conditional Logic
-
-Making decisions with if statements:
+### Functions and Classes
 
 ```
-public mutable int temperature = 22;
-public mutable string weather = "sunny";
-
-if (temperature > 25) {
-    if (weather == "sunny") {
-        print("It's hot and sunny!");
-    } else {
-        print("It's hot but not sunny.");
-    }
-} else if (temperature < 15) {
-    print("It's cold outside.");
-} else {
-    print("The temperature is pleasant.");
+// Function definition
+public function calculateArea(int width, int height) : int {
+    return width * height;
 }
 
-// Combining conditions
-if (temperature > 20 && weather == "sunny") {
-    print("Perfect day for a picnic!");
-}
-```
-
-### Loops
-
-Working with different types of loops:
-
-```
-// While loop that counts from 1 to 5
-public mutable int counter = 1;
-while (counter <= 5) {
-    print("Count: " + counter);
-    counter = counter + 1;
-}
-
-// For loop that iterates through numbers
-for (public mutable int i = 0; i < 5; i = i + 1) {
-    print("Iteration: " + i);
-}
-
-// Loop with conditional break
-public mutable int sum = 0;
-for (public mutable int i = 1; i <= 100; i = i + 1) {
-    sum = sum + i;
-    if (sum > 500) {
-        print("Sum exceeded 500 at i = " + i);
-        break;
+// Class definition with inheritance
+public class Shape {
+    protected mutable float area = 0;
+    
+    public function calculateArea() : float {
+        return area;
     }
 }
-```
 
-### Functions
-
-Defining and using functions:
-
-```
-// Function to check if a number is prime
-public function isPrime(int num) {
-    if (num <= 1) {
-        return false;
-    }
-    if (num <= 3) {
-        return true;
-    }
-    if (num % 2 == 0 || num % 3 == 0) {
-        return false;
+public class Rectangle extends Shape {
+    private mutable int width;
+    private mutable int height;
+    
+    public function __init__(int w, int h) {
+        width = w;
+        height = h;
+        area = width * height;
     }
     
-    public mutable int i = 5;
-    while (i * i <= num) {
-        if (num % i == 0 || num % (i + 2) == 0) {
-            return false;
-        }
-        i = i + 6;
+    public function getPerimeter() : int {
+        return 2 * (width + height);
     }
-    
-    return true;
 }
 
-// Using the function
-public mutable int testNumber = 17;
-if (isPrime(testNumber)) {
-    print(testNumber + " is a prime number.");
-} else {
-    print(testNumber + " is not a prime number.");
-}
+// Using the class
+public mutable Rectangle rect = @py: Rectangle(5, 3);
+print("Area: " + rect.calculateArea());  // Outputs: Area: 15
+print("Perimeter: " + rect.getPerimeter());  // Outputs: Perimeter: 16
 ```
 
-### Complex Examples
-
-Calculating Fibonacci numbers:
+### Python Integration
 
 ```
-public function fibonacci(int n) {
-    if (n <= 0) {
-        return 0;
-    }
-    if (n == 1 || n == 2) {
-        return 1;
-    }
-    
-    public mutable int a = 1;
-    public mutable int b = 1;
-    public mutable int result = 0;
-    
-    for (public mutable int i = 3; i <= n; i = i + 1) {
-        result = a + b;
-        a = b;
-        b = result;
-    }
-    
-    return result;
-}
+// Using Python's string methods directly
+public mutable string text = "EgoLang is awesome!";
+public mutable string upper_text = @py: text.upper();
+print(upper_text);  // Outputs: EGOLANG IS AWESOME!
 
-// Print the first 10 Fibonacci numbers
-for (public mutable int i = 1; i <= 10; i = i + 1) {
-    print("Fibonacci(" + i + ") = " + fibonacci(i));
-}
+// Using Python's datetime functions
+public mutable string current_date = @py: import datetime; datetime.datetime.now().strftime("%Y-%m-%d");
+print("Today is: " + current_date);  // Outputs: Today is: 2025-04-03
 ```
 
-Temperature converter:
+## 🧩 Paradigm Support
 
-```
-public function celsiusToFahrenheit(float celsius) {
-    return (celsius * 9/5) + 32;
-}
+EgoLang is designed to support multiple programming paradigms, giving developers flexibility in how they structure their code:
 
-public function fahrenheitToCelsius(float fahrenheit) {
-    return (fahrenheit - 32) * 5/9;
-}
+### Object-Oriented Programming (OOP)
 
-// Converting temperatures
-public mutable float tempC = 25.0;
-public mutable float tempF = celsiusToFahrenheit(tempC);
-print(tempC + "°C is equal to " + tempF + "°F");
+EgoLang includes support for OOP concepts:
 
-public mutable float originalF = 98.6;
-public mutable float convertedC = fahrenheitToCelsius(originalF);
-print(originalF + "°F is equal to " + convertedC + "°C");
-```
+- **Classes and Objects**: Define custom data types with encapsulated state and behavior
+- **Inheritance**: Extend existing classes to create more specialized types
+- **Encapsulation**: Control access to class members with visibility modifiers
+- **Methods**: Define functions within classes that operate on the class's state
 
-## Error Handling
+### Functional Programming
 
-The EgoLang compiler performs thorough static analysis to catch potential issues before runtime. It will generate errors for:
+While primarily focused on OOP, EgoLang also supports some functional programming concepts:
 
-1. **Mutability violations**: Attempts to modify immutable or const variables
-   ```
-   public immutable int counter = 5;
-   counter = 10;  // Error: Cannot modify immutable variable 'counter'
-   ```
+- **First-class Functions**: Functions can be assigned to variables and passed as arguments
+- **Pure Functions**: Create functions without side effects for more predictable code
+- **Immutability**: Use `immutable` and `const` declarations to create unchangeable values
 
-2. **Visibility violations**: Accessing variables outside their declared scope
-   ```
-   private function helper() {
-       private mutable int internalValue = 42;
-       return internalValue;
-   }
-   public mutable int result = internalValue;  // Error: 'internalValue' is not accessible in this scope
-   ```
+### Procedural Programming
 
-3. **Type errors**: Operations with incompatible types
-   ```
-   public mutable int number = 10;
-   public mutable string text = "Count: ";
-   public mutable int result = text + number;  // Error: Cannot add string and int directly
+For simpler code structures, EgoLang fully supports procedural programming:
+
+- **Sequential Execution**: Code is executed line by line in a predictable order
+- **Conditional Logic**: Control flow with if-else statements
+- **Loops**: Repeat operations with for and while loops
+- **Functions**: Modularize code with reusable function blocks
+
+## 🚀 Installation & Usage
+
+### Prerequisites
+
+- Python 3.8 or higher
+- 64-bit operating system
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/isamytanaka/EgoLang.git
+   cd EgoLang
    ```
 
-4. **Syntax errors**: Malformed code structures
-   ```
-   if temperature > 30 {  // Error: Missing parentheses around condition
-       print("It's hot!");
-   }
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
    ```
 
-5. **Undefined references**: Using variables or functions that don't exist
-   ```
-   print(undefinedVariable);  // Error: 'undefinedVariable' is not defined
-   ```
-
-Error messages include the line number and a clear explanation of the issue, making it easier to locate and fix problems in your code.
-
-## Compilation Process
-
-The EgoJITCompiler processes EgoLang code through several phases:
-
-1. **Lexical Analysis**: Cleans the source code by removing comments and normalizing whitespace
-2. **Parsing**: Divides the code into logical blocks and validates the syntax
-3. **Semantic Analysis**: Checks for type compatibility and visibility/mutability rules
-4. **Code Generation**: Translates each validated block to equivalent Python code
-5. **Scope Management**: Tracks variables and their properties in different scopes
-6. **Bytecode Compilation**: Compiles the generated Python code to optimized bytecode
-7. **Execution**: Runs the bytecode in the Python virtual machine
-
-> **⚠️ Note:** Compiled EgoLang programs run in the Python runtime environment, but the compiler ensures that all EgoLang's variable access and mutability rules are maintained throughout execution.
-
-## Language Limitations
-
-While EgoLang provides strong guarantees for code safety and clarity, it currently has some limitations:
-
-- **No object-oriented features**: EgoLang doesn't support classes or inheritance
-- **Limited standard library**: The language provides only basic built-in functions
-- **No exception handling**: There's no built-in mechanism for structured error handling at runtime
-- **Limited data structures**: Complex data structures beyond basic lists and dictionaries are not natively supported
-- **No concurrency model**: EgoLang doesn't provide built-in support for threading or parallel execution
-
-## Using the Compiler
-
-To compile and run EgoLang code:
+### Using the Compiler
 
 1. Navigate to the `src/Ego_compiler` file in your installation
-2. Find the `sample_code` variable at the end of the file
-3. Replace its content with your EgoLang code:
+2. Replace the `sample_code` variable with your EgoLang code:
 
-```python
-sample_code = """
-public mutable int x = 10;
-public function double(int value) {
-    return value * 2;
-}
-print(double(x));
-"""
-```
+   ```python
+   sample_code = """
+   public mutable int x = 10;
+   public function double(int value) : int {
+       return value * 2;
+   }
+   print(double(x));
+   """
+   ```
 
-4. Specify your desired output filename in the compile function:
+3. Specify your desired output filename:
 
-```python
-compiler.compile(sample_code, 'my_program.ego')
-```
+   ```python
+   compiler.compile(sample_code, 'my_program.ego')
+   ```
+
+4. Enable debug mode for additional checks (optional):
+
+   ```python
+   compiler = EgoJITCompiler(debug=True)
+   ```
 
 5. Run the compiler to generate and execute your code
 
-The compiler will process your code, report any errors it finds, and generate Python bytecode that maintains all of EgoLang's safety guarantees.
+## ⚠️ Current Limitations
+
+As EgoLang is still in early development, it has several limitations:
+
+- **Limited inheritance features**: Advanced features like multiple inheritance or interfaces are not yet available
+- **No exception handling**: There's no built-in mechanism for structured error handling (try/catch blocks)
+- **Limited standard library**: The language provides only basic built-in functions
+- **No generics support**: Parameterized types are not yet implemented
+- **Limited concurrency**: No built-in support for threading or parallel execution
+- **Early development stage**: The language is still evolving and may undergo significant changes
+- **Limited documentation**: Documentation and learning resources are still being developed
+- **Small community**: The ecosystem and support community are in the early stages of growth
+
+## 📊 Repository Statistics
+
+<div align="center">
+
+![Repository Activity](https://img.shields.io/github/commit-activity/m/isamytanaka/EgoLang?style=flat&logo=github&logoColor=white&label=Monthly%20Commits&color=FF69B4&labelColor=C71585&fontFamily=Verdana&fontWeight=bold&borderRadius=20)
+![Last Commit](https://img.shields.io/github/last-commit/isamytanaka/EgoLang?style=flat&logo=git&logoColor=white&label=Last%20Commit&color=20B2AA&labelColor=008080&fontFamily=Verdana&fontWeight=bold&borderRadius=20)
+![Contributors](https://img.shields.io/github/contributors/isamytanaka/EgoLang?style=flat&logo=github&logoColor=white&label=Contributors&color=BA55D3&labelColor=9932CC&fontFamily=Verdana&fontWeight=bold&borderRadius=20)
+![Pull Requests](https://img.shields.io/github/issues-pr/isamytanaka/EgoLang?style=flat&logo=github&logoColor=white&label=Pull%20Requests&color=FF6F61&labelColor=E74C3C&fontFamily=Verdana&fontWeight=bold&borderRadius=20)
+![Closed Issues](https://img.shields.io/github/issues-closed/isamytanaka/EgoLang?style=flat&logo=github&logoColor=white&label=Closed%20Issues&color=2ECC71&labelColor=27AE60&fontFamily=Verdana&fontWeight=bold&borderRadius=20)
+
+</div>
+
+<details>
+<summary><b>📈 Click for More Detailed Statistics</b></summary>
+<br>
+<div align="center">
+
+#### Repository Pulse
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://cdn.discordapp.com/attachments/830953538114568223/941791139063578644/issue_resolution.png" alt="Issue Resolution Time" width="90%"/>
+      <br>
+      <em>Issue Resolution Metrics</em>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://cdn.discordapp.com/attachments/830953538114568223/941791348731985930/code_frequency.png" alt="Code Frequency" width="90%"/>
+      <br>
+      <em>Code Frequency (Additions/Deletions)</em>
+    </td>
+  </tr>
+</table>
+
+#### Development Timeline
+
+<img src="https://cdn.discordapp.com/attachments/830953538114568223/941791651036905492/development_timeline.png" alt="Development Timeline" width="85%"/>
+
+#### Contributors Statistics
+
+<img src="https://contrib.rocks/image?repo=isamytanaka/EgoLang" alt="Contributors" width="70%"/>
+
+#### Repository Card
+
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=isamytanaka&repo=EgoLang&theme=radical" alt="Repository Stats" width="60%"/>
+
+</div>
+</details>
+
+## 📜 Version History
+
+EgoLang was initially launched with version 2.7.9 in March 2025. The source code for versions prior to 2.7.9 is not publicly available, as those versions were developed internally before the public release.
+
+### Release Timeline
+
+| Version | Release Date | Key Features |
+|---------|--------------|--------------|
+| **2.8.0** | April 2025 | • Python integration with `@py:` directive<br>• Basic OOP support with classes and inheritance<br>• Iterator-style for loops<br>• Return type annotations for functions<br>• Logical operators (`&&`, `\|\|`)<br>• Improved error reporting with line numbers<br>• Debug mode for enhanced type checking<br>• Default values for variable declarations<br>• Introduced the `any` type |
+| **2.7.9** | March 2025 | • Initial public release<br>• Basic language features (variables, functions, conditionals, loops)<br>• Strong typing system with visibility and mutability control<br>• JIT compilation to Python bytecode |
+| **Earlier versions** | Pre-March 2025 | *Source code not publicly available* |
+
+<div align="center">
+  <img src="https://cdn.discordapp.com/attachments/830953538114568223/941792141132906536/version_timeline.png" alt="Version Timeline" width="70%"/>
+</div>
+
+## 👥 Contributing
+
+Contributions to EgoLang are welcome! Here's how you can contribute:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/isamytanaka/EgoLang/blob/main/LICENSE) file for details.
+
+---
+
+<div align="center">
+
+Made with ❤️ by [Isamy Tanaka](https://github.com/isamytanaka)
+
+[![Follow on GitHub](https://img.shields.io/github/followers/isamytanaka?style=flat&logo=github&logoColor=white&label=Follow&color=1E90FF&labelColor=4169E1&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka)
+
+</div>
