@@ -31,6 +31,12 @@ A strongly-typed programming language with explicit control over visibility and 
 [![Test Coverage](https://img.shields.io/badge/Test_Coverage-87%25-4CAF50?style=flat&logo=pytest&logoColor=white&labelColor=388E3C&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka/EgoLang/actions)
 [![Build Status](https://img.shields.io/github/workflow/status/isamytanaka/EgoLang/CI?style=flat&logo=github-actions&logoColor=white&label=Build&color=03A9F4&labelColor=0288D1&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka/EgoLang/actions)
 
+## Support the Developer
+
+[![Support on Apoia.se](https://img.shields.io/badge/Apoia.se-Support_Isamy_Tanaka-D72638?style=flat&logo=buymeacoffee&logoColor=white&labelColor=FF3D3D&color=D72638)](https://apoia.se/isamytanaka)
+
+If you find this project valuable, consider supporting Isamy Tanaka's work through Apoia.se. Your contribution helps maintain and improve EgoLang and its ecosystem.
+
 </div>
 
 ## 📚 Table of Contents
