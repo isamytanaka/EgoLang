@@ -310,6 +310,37 @@ EgoLang was initially launched with version 2.7.9 in March 2025. The source code
 | **2.7.9** | March 2025 | • Initial public release<br>• Basic language features (variables, functions, conditionals, loops)<br>• Strong typing system with visibility and mutability control<br>• JIT compilation to Python bytecode |
 | **Earlier versions** | Pre-March 2025 | *Source code not publicly available* |
 
+## Official Text Processing Library: EgoText
+
+For robust string manipulation in EgoLang, we recommend using the official **EgoText** library, specifically designed to work seamlessly with EgoLang's type system and compilation pipeline.
+
+[![EgoText Version](https://img.shields.io/badge/EgoText-1.2.0-00CED1?style=flat&logo=semantic-release&logoColor=white)](https://github.com/isamytanaka/EgoText)
+[![EgoLang Compatible](https://img.shields.io/badge/EgoLang-2.8%2B-00A4E0?style=flat)](https://github.com/isamytanaka/EgoLang)
+
+### Why Use EgoText?
+
+- **Native Integration**: Built specifically for EgoLang's type system and compiler
+- **Performance Optimized**: Hybrid EgoLang/Python implementation for critical paths
+- **Complete API**: All essential string operations in one package
+- **Maintained**: Officially supported by the EgoLang core team
+
+### Getting Started
+
+### Key Features
+
+```ego
+// Sample usage:
+public mutable EgoText text = @py: EgoText();
+text.content = "  Hello EgoLang  ";
+print(text.trim().toUpper().reverse()); // "GNALOGE OLLEH"
+```
+
+### Documentation
+
+Full documentation and examples available at:  
+[https://github.com/isamytanaka/EgoText](https://github.com/isamytanaka/EgoText)
+
+
 ## 👥 Contributing
 
 Contributions to EgoLang are welcome! Here's how you can contribute:
@@ -331,6 +362,10 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 
 Made with ❤️ by [Isamy Tanaka](https://github.com/isamytanaka)
 
-[![Follow on GitHub](https://img.shields.io/github/followers/isamytanaka?style=flat&logo=github&logoColor=white&label=Follow&color=1E90FF&labelColor=4169E1&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka)
+[![Issues](https://img.shields.io/badge/Support-GitHub_Issues-FFA500?style=flat&logo=github)](https://github.com/isamytanaka/EgoLang/issues)
+[![Apoia.se](https://img.shields.io/badge/Apoia.se-Support_Isamy_Tanaka-D72638?style=flat&logo=buymeacoffee&logoColor=white)](https://apoia.se/isamytanaka)
+
+[![Follow](https://img.shields.io/github/followers/isamytanaka?style=social)](https://github.com/isamytanaka)  
+![Profile Views](https://count.getloli.com/get/@isamytanaka.github.readme)
 
 </div>
