@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![EgoLang Logo](logo.png)
+![EgoLang Logo](ego.png)
 
 A strongly-typed programming language with explicit control over visibility and mutability
 
