@@ -1,9 +1,9 @@
 {
     "name": "Egolang",
     "description": "Ego is a simple and powerful language, perfect for beginners and projects that need basic features like variables and math operations. It's compiled and efficient.",
-    "version": "2.8.0",
+    "version": "2.9.0",
     "author": "isamytanaka",
-    "last_updated": "2025-04-5",
+    "last_updated": "2025-04-7",
     "structure": [
         "src",
         "tests",
