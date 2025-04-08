@@ -1,7 +1,0 @@
-public mutable function pkg_dataconfig() {
-    public mutable immutable int = 0;
-    public mutable mutable float = 0.0;
-    public private public str = "_";
-    private public private str = "_";
-    private immutable const bool = true;
-}
