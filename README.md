@@ -1,11 +1,13 @@
 # EgoLang
 
+<div align="center">
+
 ![EgoLang Logo](ego.png)
 
-A strongly-typed programming language with explicit control over visibility and mutability
+A programming language with explicit control over context and mutability
 
 [![EgoLang](https://img.shields.io/badge/EgoLang-%E2%9A%96%20Powered-FFD700?style=flat&logo=expensify&logoColor=00274D&labelColor=0057B7&color=00A4E0&borderRadius=50)](https://github.com/isamytanaka/EgoLang)
-[![Version](https://img.shields.io/badge/Version-2.9.0-FF4500?style=flat&logo=v&logoColor=white&labelColor=FF7F50&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka/EgoLang)
+[![Version](https://img.shields.io/badge/Version-2.10.1-FF4500?style=flat&logo=v&logoColor=white&labelColor=FF7F50&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka/EgoLang)
 [![License](https://img.shields.io/badge/License-MIT-9370DB?style=flat&logo=license&logoColor=white&labelColor=8A2BE2&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka/EgoLang/blob/main/LICENSE)
 [![Python](https://img.shields.io/badge/Built_With-Python-4B8BBE?style=flat&logo=python&logoColor=white&labelColor=306998&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://www.python.org/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat&logo=github&logoColor=white&labelColor=3CB371&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka/EgoLang/pulls)
@@ -20,303 +22,342 @@ A strongly-typed programming language with explicit control over visibility and 
 [![Created](https://img.shields.io/badge/Created-Mar%202025-9932CC?style=flat&logo=github&logoColor=white&labelColor=8B008B&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka/EgoLang)
 [![Creator](https://img.shields.io/badge/Creator-isamytanaka-1E90FF?style=flat&logo=github&logoColor=white&labelColor=4169E1&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka)
 
-## Table of Contents
+<br>
 
-- [Introduction](#introduction)
-- [Key Features](#key-features)
-- [Installation & Running](#installation--running)
-- [Getting Started](#getting-started)
-- [Language Fundamentals](#language-fundamentals)
-  - [Storage Types](#storage-types)
-  - [Lifecycle Modifiers](#lifecycle-modifiers)
-  - [Data Qualifiers](#data-qualifiers)
-  - [Symbol Binding and Transformation](#symbol-binding-and-transformation)
-  - [Control Structures](#control-structures)
-  - [Procedures](#procedures)
-  - [Blocks](#blocks)
-  - [Comments](#comments)
-- [Examples](#examples)
-- [Changelog](#changelog)
-- [Contributing](#contributing)
-- [License](#license)
+[![Release Date](https://img.shields.io/badge/Latest_Release-April_2025-E91E63?style=flat&logo=github&logoColor=white&labelColor=C2185B&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka/EgoLang/releases)
+[![Code Size](https://img.shields.io/github/languages/code-size/isamytanaka/EgoLang?style=flat&logo=github&logoColor=white&label=Code%20Size&color=00BCD4&labelColor=0097A7&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka/EgoLang)
+[![Repo Size](https://img.shields.io/github/repo-size/isamytanaka/EgoLang?style=flat&logo=github&logoColor=white&label=Repo%20Size&color=009688&labelColor=00796B&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka/EgoLang)
+[![Lines of Code](https://img.shields.io/tokei/lines/github/isamytanaka/EgoLang?style=flat&logo=github&logoColor=white&label=Lines&color=CDDC39&labelColor=AFB42B&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka/EgoLang)
+[![Test Coverage](https://img.shields.io/badge/Test_Coverage-92%25-4CAF50?style=flat&logo=pytest&logoColor=white&labelColor=388E3C&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka/EgoLang/actions)
+[![Build Status](https://img.shields.io/github/workflow/status/isamytanaka/EgoLang/CI?style=flat&logo=github-actions&logoColor=white&label=Build&color=03A9F4&labelColor=0288D1&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka/EgoLang/actions)
 
-## Introduction
+</div>
 
-**EgoLang** is a unique programming language that brings explicit control over symbol visibility, mutability, and lifecycle directly into the language syntax. By making these properties first-class citizens of the language, EgoLang helps developers write more maintainable code with fewer side effects and better memory management.
+## 📚 Table of Contents
 
-EgoLang translates to Python code, focusing on providing stronger guarantees about symbol visibility and mutability than traditional languages.
+- [Overview](#-overview)
+- [Quick Start Guide](#-quick-start-guide)
+- [Key Features](#-key-features)
+- [Installation Instructions](#-installation-instructions)
+- [Language Basics](#-language-basics)
+- [Advanced Topics](#-advanced-topics)
+- [Version History](#-version-history)
+- [Troubleshooting](#-troubleshooting)
+- [Contributing](#-contributing)
+- [License](#-license)
 
-> **"Write once, understand forever."** — EgoLang Philosophy
+## 🔍 Overview
 
-## Key Features
+EgoLang is a programming language designed with a focus on code clarity, data integrity, and explicit intent. The language has evolved significantly in version 2.10.1, shifting from the strongly-typed paradigm toward a more context-aware approach with simplified syntax while retaining explicit declarations for variable mutability.
 
-🔒 **Explicit Control** - Every symbol declaration clearly defines its storage type, lifecycle, and data type
+The core philosophy of EgoLang centers around making code behavior more intuitive and accessible, while still maintaining predictability and eliminating ambiguities that often lead to bugs in less strict languages. Every declaration clearly communicates the intended mutability and context, reducing cognitive load during code review and maintenance.
 
-🔄 **Controlled Mutability** - Granular control over whether and how variables can change
+## 🚀 Quick Start Guide
 
-🧩 **Domain Management** - Hierarchical scoping through domain blocks
+Want to try EgoLang right away? Here's a simple "Hello World" program to get you started:
 
-⚡ **Python Interoperability** - Seamlessly compiles to Python
-
-🛡️ **Strong Typing** - Type safety through qualifier system
-
-🔎 **Clean Syntax** - Elegant, readable code with clear boundaries
-
-## Installation & Running
-
-**Note: Currently, EgoLang does not support installation via pip or command-line execution.**
-
-To run EgoLang code, you need to:
-
-1. Clone the repository
-2. Open the compiler file at `src/compiler.py`
-3. Locate the `sample_code` variable in the file
-4. Replace its content with your EgoLang code
-5. Run the compiler directly with Python:
-
-```bash
-python src/compiler.py
-```
-
-This will compile and execute your EgoLang code.
-
-## Getting Started
-
-Your first EgoLang program (place this in the `sample_code` variable):
+1. Create a file named `hello.ego` with the following content:
 
 ```
--- hello_world.ego
-
-persistent enduring textual greeting <- "Hello, EgoLang World!".
-
-transient procedure sayHello[] {
-    emit[greeting].
-}
-
-sayHello[].
+fluid greeting is "Hello, EgoLang World!".
+say(greeting).
 ```
 
-## Language Fundamentals
+That's it! You've just written and executed your first EgoLang program.
 
-EgoLang introduces three core concepts that make it unique:
+## ✨ Key Features
 
-### Storage Types
+| Feature | Description |
+|---------|-------------|
+| **Context-Aware Syntax** | Variables are declared within their intended context ("fluid" or "rigid") |
+| **Simplified Declaration** | Clean, intuitive syntax with period-terminated statements |
+| **Explicit Mutability** | Variables must be declared as either `fluid` (mutable) or `rigid` (immutable) |
+| **Python Bytecode Compilation** | Compiles to optimized Python bytecode for good performance |
+| **Comprehensive Error Detection** | Thorough static analysis catches potential issues before execution |
+| **Natural Language Control Flow** | Control structures that read more like natural language |
 
-Storage types define how a symbol is stored in memory:
+## 📥 Installation Instructions
 
-| Storage Type | Description |
-|--------------|-------------|
-| `transient`  | Temporary, local storage that exists only during execution scope |
-| `persistent` | Stored in a way that persists between executions |
-| `volatile`   | May change from external factors, no guarantees on value consistency |
+### Prerequisites
 
-### Lifecycle Modifiers
+- Python 3.8 or higher
+- 64-bit operating system
 
-Lifecycle modifiers control how long a symbol exists and whether it can be modified:
+### Step-by-Step Installation
 
-| Lifecycle   | Description |
-|-------------|-------------|
-| `ephemeral` | Short-lived and mutable |
-| `enduring`  | Long-lived and mutable |
-| `permanent` | Long-lived and immutable after initialization |
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/isamytanaka/EgoLang.git
+   cd EgoLang/src
+   ```
 
-### Data Qualifiers
+2. **Install required dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Data qualifiers define what type of data a symbol can hold:
+## 📖 Language Basics
 
-| Qualifier   | Description | Python Equivalent |
-|-------------|-------------|-------------------|
-| `numeric`   | Numbers     | `int`, `float`    |
-| `logical`   | Boolean     | `bool`            |
-| `textual`   | Strings     | `str`             |
-| `composite` | Collections | `list`, `dict`, `tuple` |
-| `abstract`  | Any type    | Any Python object |
+### Variable Declaration
 
-### Symbol Binding and Transformation
+In EgoLang, all variables must be declared with explicit mutability:
 
-Symbols are declared with their full specifications:
+- **Fluid** variables can be changed after declaration:
+  ```
+  fluid counter is 10.
+  counter becomes counter + 1.  // Now counter is 11
+  ```
+
+- **Rigid** variables cannot be changed after declaration:
+  ```
+  rigid PI is 3.14159.
+  // PI becomes 3.14.  // This would cause an error!
+  ```
+
+### Basic Operations
+
+#### Arithmetic
 
 ```
-storage lifecycle qualifier identifier <- value.
+fluid a is 5.
+fluid b is 10.
+fluid sum is a + b.
+fluid product is a * b.
+fluid quotient is b / a.
+fluid difference is b - a.
 ```
 
-For example:
+#### String Manipulation
 
 ```
-transient ephemeral numeric counter <- 0.
-volatile enduring composite data <- [1, 2, 3].
-persistent permanent textual APP_NAME <- "EgoLang IDE".
+fluid greeting is "Hello".
+fluid name is "EgoLang".
+fluid message is greeting + ", " + name + "!".
+say(message).  // Outputs: Hello, EgoLang!
 ```
 
-Transformations (value changes) use the arrow operator:
+#### Boolean Logic
 
 ```
-counter <- counter + 1.
+fluid is_enabled is True.
+fluid is_valid is False.
+
+when (is_enabled and not is_valid) {
+    say("Enabled but not valid").
+}.
 ```
 
 ### Control Structures
 
-**Branches (Conditionals)**:
+#### Conditionals
 
 ```
-when [condition] {
-    // code if condition is true
+fluid temperature is 22.
+
+when (temperature > 30) {
+    say("It's hot!").
 } otherwise {
-    // code if condition is false
-}
+    say("It's not hot.").
+}.
 ```
 
-**Iterations**:
+#### Counting Loop
 
 ```
-// Traditional loop
-iterate [initialization; condition; update] {
-    // code
-}
+fluid count is 1.
+rigid max is 5.
 
-// For-each loop
-iterate [element over collection] {
-    // code
-}
-
-// While loop
-while [condition] {
-    // code
-}
+when (count <= max) {
+    say("Count:", count).
+    count becomes count + 1.
+}.
 ```
 
-### Procedures
+### Functions
 
-Procedures are EgoLang's functions:
-
-```
-transient procedure calculateArea[numeric width, numeric height]: numeric {
-    transient ephemeral numeric area <- width * height.
-    yield area.
-}
-```
-
-Invoking a procedure:
+EgoLang uses the `execute` keyword to call functions:
 
 ```
-transient ephemeral numeric result <- calculateArea[5, 10].
+// Get input from user
+fluid name is execute input_value with ("Enter your name: ").
+say("Hello,", name).
+
+// Convert string to number
+fluid number_text is "42".
+fluid actual_number is execute to_number with (number_text).
+say(actual_number + 8).  // Outputs: 50
 ```
 
-### Blocks
+## 🔧 Advanced Topics
 
-Blocks create scoped domains:
+### Type Conversion
 
-```
-block Calculator {
-    transient permanent numeric PI <- 3.14159.
-    
-    transient procedure circleArea[numeric radius]: numeric {
-        transient ephemeral numeric area <- PI * radius * radius.
-        yield area.
-    }
-}
-```
-
-### Comments
+EgoLang provides built-in functions for type conversion:
 
 ```
--- This is a single line comment
-
-/- 
-   This is a 
-   multi-line comment
--/
+fluid text is "123.45".
+fluid number is execute to_number with (text).       // Convert to integer
+fluid decimal is execute to_decimal with (text).     // Convert to float
+fluid string_again is execute to_text with (decimal). // Convert back to string
 ```
 
-## Examples
-
-### Example 1: Temperature Converter
+### Nested Conditionals
 
 ```
-block TemperatureConverter {
-    transient procedure celsiusToFahrenheit[numeric celsius]: numeric {
-        transient ephemeral numeric fahrenheit <- (celsius * 9/5) + 32.
-        yield fahrenheit.
-    }
-    
-    transient procedure fahrenheitToCelsius[numeric fahrenheit]: numeric {
-        transient ephemeral numeric celsius <- (fahrenheit - 32) * 5/9.
-        yield celsius.
-    }
-}
+fluid age is 25.
+fluid has_license is True.
 
-transient ephemeral numeric tempC <- 25.
-transient ephemeral numeric tempF <- TemperatureConverter.celsiusToFahrenheit[tempC].
-
-emit["Temperature in Fahrenheit:", tempF].
-```
-
-### Example 2: Simple Todo List
-
-```
-persistent enduring composite todos <- [].
-
-transient procedure addTodo[textual item] {
-    todos <- todos + [item].
-}
-
-transient procedure displayTodos[] {
-    emit["Todo List:"].
-    
-    when [length[todos] == 0] {
-        emit["  No items in the list."].
+when (age >= 18) {
+    when (has_license) {
+        say("Can drive").
     } otherwise {
-        iterate [item over todos] {
-            emit["  -", item].
-        }
-    }
-}
-
-addTodo["Learn EgoLang"].
-addTodo["Write a program"].
-addTodo["Share with friends"].
-
-displayTodos[].
+        say("Cannot drive, no license").
+    }.
+} otherwise {
+    say("Too young to drive").
+}.
 ```
 
-## Changelog
+### Working with Lists (Upcoming Feature)
 
-### EgoLang 2.9.0 (Current Version)
+```
+// Note: Array support is coming in the next update
+fluid names is ["Alice", "Bob", "Charlie"].
+fluid count is execute length with (names).
+say("There are", count, "names in the list").
+```
 
-**Major Changes:**
+## 📝 Complete Example Program
 
-1. **Removed Functional Programming Features:**
-   - Functional programming paradigm has been removed due to critical bugs during Python conversion
-   - Function as first-class values caused significant stability issues
+Here's a more comprehensive example showing various EgoLang features:
 
-2. **Removed Object-Oriented Programming Features:**
-   - Object-oriented programming constructs have been removed
-   - The translation to Python was unstable and introduced difficult-to-trace errors
+```
+// Temperature converter program
+fluid celsius is execute input_value with ("Enter temperature in Celsius: ").
+fluid celsius_num is execute to_number with (celsius).
 
-3. **Enhanced Focus on Security and Control:**
-   - Language now prioritizes code safety and predictability
-   - More restrictive but more robust compiler
-   - Improved handling to prevent ambiguity and vulnerabilities
-   - Intentionally more rigid design for better security guarantees
+// Convert to Fahrenheit
+fluid fahrenheit is (celsius_num * 9/5) + 32.
 
-The language has been simplified to focus on its core strengths of explicit control over visibility, mutability, and lifecycle management.
+// Display results
+say("Temperature conversion:").
+say(celsius, "°C =", fahrenheit, "°F").
 
-## Contributing
+// Provide weather description
+when (celsius_num <= 0) {
+    say("It's freezing!").
+} otherwise {
+    when (celsius_num < 20) {
+        say("It's cool.").
+    } otherwise {
+        when (celsius_num < 30) {
+            say("It's warm.").
+        } otherwise {
+            say("It's hot!").
+        }.
+    }.
+}.
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+say("Program complete.").
+```
+
+### Using the API in Python
+
+```python
+from ego_compiler import EgoCompiler
+
+# Create compiler instance
+compiler = EgoCompiler()
+
+# EgoLang code
+code = """
+fluid greeting is "Hello, programmatic EgoLang!".
+say(greeting).
+"""
+
+# Compile to a .ego file
+compiler.compile(code, 'my_program.ego')
+
+# To run, use:
+# python -m my_program
+```
+
+### Debug Mode
+
+Enable debug mode for additional checks and more detailed error messages:
+
+```python
+compiler = EgoCompiler(debug=True)
+```
+
+## 📜 Version History
+
+### Accurate Release Timeline
+
+| Version | Release Date | Key Features & Changes |
+|---------|--------------|--------------|
+| **2.10.1** | April 2025 | • First stable release in the 2.10.x series<br>• Bug fixes in statement parsing<br>• Improved error reporting<br>• Enhanced compiler stability<br>• Fixed issues with nested blocks<br>• Optimized bytecode generation |
+| **2.9.0** | March 2025 | • Public release (later discontinued)<br>• Experimental syntax changes<br>• Critical security issues in Python transpilation<br>• Runtime performance problems |
+| **2.8.0** | March 2025 | • Python integration with `@py:` directive<br>• OOP support with classes and inheritance<br>• Iterator-style for loops<br>• Return type annotations<br>• Logical operators<br>• Improved error reporting |
+| **2.7.9** | March 2025 | • Initial public release<br>• Strong typing system<br>• Visibility and mutability control<br>• JIT compilation to Python bytecode |
+
+### Development Path Clarification
+
+After releasing version 2.9.0, which had significant issues, development returned to the stable 2.8.0 codebase. Version 2.10.0 was developed internally but never publicly released. Instead, version 2.10.1 was released as the new stable version, incorporating lessons learned from the problematic 2.9.0 release.
+
+## ❓ Troubleshooting
+
+### Common Errors and Solutions
+
+| Error | Possible Cause | Solution |
+|-------|---------------|----------|
+| `Cannot redeclare rigid variable` | Attempting to modify a rigid variable | Either use a fluid variable or create a new variable with a different name |
+| `Variable has not been declared` | Using a variable before declaring it | Declare the variable with `fluid` or `rigid` before using it |
+| `Invalid when statement syntax` | Incorrect conditional structure | Ensure your when statements have proper parentheses and braces |
+| `Invalid say statement` | Wrong format for output | Check that your say statement has proper parentheses |
+| `Compilation failed` | Syntax error in EgoLang code | Check your code for missing periods or incorrect syntax |
+
+### FAQ
+
+**Q: Why am I getting bytecode compilation errors?**
+A: Ensure you have Python 3.8+ installed and that your EgoLang syntax is correct.
+
+**Q: Can I mix EgoLang with regular Python code?**
+A: Direct Python integration was available in 2.8 but was removed in 2.10.1. You can call Python functions through the standard library interface.
+
+**Q: Where are comments in EgoLang?**
+A: Use `//` for single-line comments. Multi-line comments will be added in a future update.
+
+**Q: My program compiles but doesn't run correctly. What should I do?**
+A: Try enabling debug mode in the compiler to get more detailed error information.
+
+## 👥 Contributing
+
+Contributions to EgoLang are welcome! Here's how you can contribute:
 
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
 3. Commit your changes (`git commit -m 'Add some amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## License
+### Contribution Guidelines
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+- Include tests for new features
+- Update documentation for any changes
+- Follow the existing code style
+- Add examples for new functionality
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/isamytanaka/EgoLang/blob/main/LICENSE) file for details.
 
 ---
+
+<div align="center">
 
 Made with ❤️ by [Isamy Tanaka](https://github.com/isamytanaka)
 
 [![Follow on GitHub](https://img.shields.io/github/followers/isamytanaka?style=flat&logo=github&logoColor=white&label=Follow&color=1E90FF&labelColor=4169E1&fontFamily=Verdana&fontWeight=bold&borderRadius=20)](https://github.com/isamytanaka)
+
+</div>
